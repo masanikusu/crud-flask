@@ -35,7 +35,6 @@ class Purchase(db.Model):
 
     purchase_details = db.relationship("Purchase_detail",backref="purchases",cascade="delete")
 
-
 class Purchase_detail(db.Model):
     __tablename__="purchase_details"
     purchase_id = db.Column(db.Integer,db.ForeignKey("purchases.purchase_id"),primary_key=True)
@@ -46,7 +45,6 @@ class Purchase_detail(db.Model):
         self.purchase_id = purchase_id
         self.item_id = item_id
         self.quantity = quantity
-
 
 class Item(db.Model):
     __tablename__="items"

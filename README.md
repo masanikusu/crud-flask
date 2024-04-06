@@ -12,8 +12,7 @@ $ deactivate
 $ venv/bin/python CRMAPP/app.py
 ```
 
-### パッケージインストール
-
+### パッケージインストール (venv内)
 ```
 $ pip install -r requirements.txt
 ```

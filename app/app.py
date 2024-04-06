@@ -83,7 +83,6 @@ def delete_item():
         return render_template("error.html")
     return render_template("item/deleted.html",item=item)
 
-
 #2-3.商品更新
 @app.route("/update_item",methods=["POST"])
 def update_item():
@@ -225,7 +224,6 @@ def count_customers():
     result = str(number_of_customers)+"人"
     return render_template("data/result_statistics.html",statistics_type=statistics_type,result=result)
 
-
 #4-3.総販売商品数量算出
 @app.route("/count_quantity",methods=["POST"])
 def count_quantity():
@@ -239,7 +237,6 @@ def count_quantity():
         result = row
     result = str(int(result))+"個"
     return render_template("data/result_statistics.html",statistics_type=statistics_type,result=result)
-
 
 #4-4.総売上算出
 @app.route("/total_sales",methods=["POST"])
